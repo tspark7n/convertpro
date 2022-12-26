@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link href="{{ url_for('static', filename='style.scss.css') }}"
+      rel="stylesheet" type="text/css">
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.scss') }}"
+    />
+    
+
+    <title>{% block title %}Home{% endblock %}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <div class="site-header__start">
+          <a href="#" class="brand">Brand</a>
+        </div>
+        <div class="site-header__middle">
+          <nav class="nav">
+            <button class="nav__toggle" aria-expanded="false" type="button">
+              Menu
+            </button>
+            <ul class="nav__wrapper" style="z-index: 9">
+              <li class="nav__item"><a href="#">PDF to Word</a></li>
+              <li class="nav__item"><a href="#">PDF to Excel</a></li>
+              <li class="nav__item"><a href="#">Generate QR Code</a></li>
+              <li class="nav__item"><a href="#">Create GST Invoice</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-header__end">
+          <a href="#">Sign in</a>
+        </div>
+      </div>
+    </header>
+
+
+
+
+    <div class="container">{% block content %} {% endblock %}</div>
+
+
+    <div class="footer-dark">
+      <footer>
+          <div class="container aleft">
+              <div class="row">
+                  <div class="col-sm-6 col-md-4 item">
+                      <h3>Utility</h3>
+                      <ul>
+                          <li><a href="#">PDF to Word</a></li>
+                          <li><a href="#">PDF to Excel</a></li>
+                          <li><a href="#">QR Code Generator</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-6 col-md-4 item">
+                      <h3>About</h3>
+                      <ul>
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Term of Usage</a></li>
+                          <li><a href="#">Join our Github Page </a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4 item text">
+                      <h3>ConvertPro</h3>
+                      <p>ConvertPro is a free service and all files uploaded by users are deleted from our server after 1 Hour.
+                        <br>We plan to provide the service for free as long as we can afford. If you want support our cause you can make a donation.
+                      </p>
+                  </div>
+                  <div class="col item social">
+                    <a href="#">
+                      <iconify-icon icon="ion:logo-facebook"></iconify-icon>
+                    </a>
+                    <a href="#">
+                      <iconify-icon icon="ion:logo-github"></iconify-icon>
+                    </a>
+                    <a href="#">
+                      <iconify-icon icon="ion:logo-discord"></iconify-icon>
+                    </a>
+                    <a href="#">
+                      <iconify-icon icon="ion:logo-codepen"></iconify-icon>
+                    </a>
+                  </div>
+              </div>
+              <p class="copyright">Convert Pro LLC © 2022</p>
+          </div>
+      </footer>
+  </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js') }}"
+    ></script>
+
+    <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='header.js') }}"
+  ></script>
+  </body>
+</html>

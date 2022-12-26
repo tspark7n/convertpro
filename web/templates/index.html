@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
+<div class="container">
+    <h1>
+        PDF to Word Converter
+    </h1>
+    <p>Convert your PDF document to Word Document with perfect accuracy!</p>
+    <form action="pdf2word" method="POST" enctype="multipart/form-data">
+        <div class="frame">
+            <label for="images" class="drop-container">
+                <span class="drop-title">Drop PDF files here</span>
+                or
+                <input type="file" name="filename" id="images" accept="application/pdf" required>
+            </label>
+            <input class="convert-btn" type="submit" value="Convert Now (to Docx)">
+        </div>
+
+    </form>
+
+</div>
+
+
+{% endblock %}
