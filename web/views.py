@@ -2,6 +2,9 @@ from flask import Flask, Blueprint
 from flask import request,render_template,redirect,url_for,send_file
 import os,sys
 from pdf2docx import parse
+import tabula
+import pandas as pd
+import camelot as cam
 from typing import Tuple
 from tkinter import Tk,messagebox
 from tkinter import _tkinter
@@ -37,7 +40,6 @@ def index():
            return render_template("docx.html",variable=lis)
     return render_template("index.html")
 
-
 @views.route('/docx',methods=['GET','POST'])
 def docx():
     if request.method=="POST":
@@ -46,4 +48,4 @@ def docx():
         return send_file('files\\' + lis,as_attachment=True)
     return  render_template("index.html")
 
-
+ 
